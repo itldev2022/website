@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { openGraph } from '@/lib/helper';
-
 const defaultMeta = {
   title: 'International Total Service & Logistics',
   siteName: 'International Total Service & Logistics',
@@ -27,14 +25,6 @@ export default function Seo(props: SeoProps) {
   meta['title'] = props.templateTitle
     ? `${props.templateTitle} | ${meta.siteName}`
     : meta.title;
-
-  // Use siteName if there is templateTitle
-  // but show full title if there is none
-  meta['image'] = openGraph({
-    description: meta.description,
-    siteName: props.templateTitle ? meta.siteName : meta.title,
-    templateTitle: props.templateTitle,
-  });
 
   return (
     <Head>
@@ -92,7 +82,6 @@ type Favicons = {
   type?: string;
 };
 
-// !STARTERCONF this is the default favicon, you can generate your own from https://www.favicon-generator.org/ then replace the whole /public/favicon folder
 const favicons: Array<Favicons> = [
   {
     rel: 'apple-touch-icon',
