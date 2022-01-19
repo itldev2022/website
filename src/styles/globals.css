@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.markdown {
+  @apply px-5;
+}
+
+.markdown > ul {
+  @apply list-disc;
+}
+.markdown > ol {
+  @apply list-decimal;
+}
+.markdown > ul > li > ul,
+.markdown > ol > li > ul {
+  @apply ml-8 list-disc;
+}

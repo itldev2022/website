@@ -1,18 +1,16 @@
 import * as React from 'react';
 
-import Hero from '@/components/home/Hero';
 import AboutUs from '@/components/home/AboutUs';
-import Services from '@/components/home/Services';
+import Hero from '@/components/home/Hero';
 import Perfomance from '@/components/home/Perfomance';
+import Services from '@/components/home/Services';
 import Strength from '@/components/home/Strength';
-
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
+import Seo from '@/components/Seo';
 
 export default function HomePage() {
   return (
     <>
+      <Seo />
       <Hero />
       <AboutUs />
       <Services />

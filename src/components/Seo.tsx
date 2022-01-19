@@ -3,17 +3,14 @@ import { useRouter } from 'next/router';
 
 import { openGraph } from '@/lib/helper';
 
-// !STARTERCONF Change these default meta
 const defaultMeta = {
   title: 'International Total Service & Logistics',
   siteName: 'International Total Service & Logistics',
-  description: 'International Total Service & Logistics Website',
-  /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
+  description: 'Your Reliable Integrated Logistic Partner',
   url: 'https://itlid.com',
   type: 'website',
   robots: 'follow, index',
-  /** No need to be filled, will be populated with openGraph function */
-  image: '',
+  image: 'https://itlid.com/images/og.png',
 };
 
 type SeoProps = {

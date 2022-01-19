@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const metrics = [
   {
     id: 1,
@@ -27,39 +29,40 @@ const metrics = [
 
 export default function Perfomance() {
   return (
-    <div className='bg-gray-900 relative'>
-      <div className='absolute bottom-0 h-80 w-full xl:h-full xl:inset-0'>
-        <div className='h-full w-full xl:grid xl:grid-cols-2'>
-          <div className='h-full xl:col-start-2 xl:relative'>
-            <img
-              className='h-full object-cover opacity-25 w-full xl:absolute xl:inset-0'
+    <div className='relative bg-gray-900'>
+      <div className='absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full'>
+        <div className='w-full h-full xl:grid xl:grid-cols-2'>
+          <div className='h-full xl:relative xl:col-start-2'>
+            <Image
+              layout='fill'
+              className='object-cover w-full h-full opacity-25 xl:absolute xl:inset-0'
               src='/images/perfomance.jpg'
               alt='people looking at container'
             />
             <div
               aria-hidden='true'
-              className='absolute bg-gradient-to-b from-gray-900 h-32 inset-x-0 top-0 xl:bg-gradient-to-r xl:h-full xl:inset-y-0 xl:left-0 xl:w-32'
+              className='absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:w-32 xl:h-full xl:bg-gradient-to-r'
             />
           </div>
         </div>
       </div>
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:gap-x-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense'>
-        <div className='pb-64 pt-12 relative sm:pb-64 sm:pt-24 xl:col-start-1 xl:pb-24'>
-          <h2 className='font-semibold text-saphire-300 text-sm tracking-wide uppercase'>
+      <div className='px-4 mx-auto max-w-4xl sm:px-6 lg:px-8 lg:max-w-7xl xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8'>
+        <div className='relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24'>
+          <h2 className='text-saphire-300 text-sm font-semibold tracking-wide uppercase'>
             Perfomance
           </h2>
-          <p className='font-extrabold mt-3 text-3xl text-white'>
+          <p className='mt-3 text-3xl font-extrabold text-white'>
             Our Perfomance in 2021
           </p>
-          <p className='mt-5 text-gray-300 text-lg'>
+          <p className='mt-5 text-lg text-gray-300'>
             In 2021 thanks to our strategic cooperation with shippers, buyers
             and ship owners we have achieved many succesfull assisted as load
             port and discharge port from all over Indonesia.
           </p>
-          <div className='gap-x-6 gap-y-12 grid grid-cols-1 mt-12 sm:grid-cols-2'>
+          <div className='grid grid-cols-1 gap-x-6 gap-y-12 mt-12 sm:grid-cols-2'>
             {metrics.map((item) => (
               <p key={item.id}>
-                <span className='block font-bold text-2xl text-white'>
+                <span className='block text-2xl font-bold text-white'>
                   {item.stat}
                 </span>
                 <span className='block mt-1 text-base text-gray-300'>

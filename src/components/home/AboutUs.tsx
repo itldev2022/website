@@ -1,24 +1,26 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AboutUs() {
   return (
-    <div className='my-20 relative lg:my-0'>
-      <div className='lg:gap-24 lg:grid lg:grid-cols-2 lg:items-start lg:max-w-7xl lg:mx-auto lg:px-8'>
+    <div className='relative my-20 lg:my-0'>
+      <div className='lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start lg:px-8 lg:mx-auto lg:max-w-7xl'>
         <div className='relative sm:py-16 lg:py-0'>
-          <div className='max-w-md mx-auto px-4 relative sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20'>
-            <div className='overflow-hidden pb-10 pt-64 relative shadow-xl lg:pt-96'>
-              <img
-                className='absolute h-full inset-0 object-cover w-full'
+          <div className='relative px-4 mx-auto max-w-md sm:px-6 sm:max-w-3xl lg:px-0 lg:py-20 lg:max-w-none'>
+            <div className='overflow-hidden relative pt-64 pb-10 shadow-xl lg:pt-96'>
+              <Image
+                layout='fill'
+                className='object-cover absolute inset-0 w-full h-full'
                 src='/images/about-us.jpg'
                 alt='Cargo container'
               />
             </div>
           </div>
         </div>
-        <div className='max-w-md mx-auto px-4 relative sm:max-w-3xl sm:px-6 lg:px-0'>
+        <div className='relative px-4 mx-auto max-w-md sm:px-6 sm:max-w-3xl lg:px-0'>
           {/* Content area */}
           <div className='pt-12 sm:pt-16 lg:pt-20'>
-            <h2 className='font-extrabold text-3xl text-gray-900 tracking-tight sm:text-4xl'>
+            <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
               About us
             </h2>
             <div className='mt-6 space-y-6 text-gray-500'>
@@ -28,15 +30,15 @@ export default function AboutUs() {
                 transport services in Indonesia by providing main services such
                 as shipping agency, cargo broking and forwarding.
               </p>
-              <p className='leading-7 text-base'>
+              <p className='text-base leading-7'>
                 Within a year of establishment, ITL have expanded its network
                 and branch offices all over Asia and is also a member of the
                 Indonesian National Shipowner’s Association (INSA)
               </p>
-              <Link href='/about'>
+              <Link passHref href='/about'>
                 <button
                   type='button'
-                  className='bg-primary border border-transparent font-medium inline-flex items-center px-6 py-3 shadow-sm text-base text-white hover:bg-saphire-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-saphire-300'
+                  className='bg-primary inline-flex items-center px-6 py-3 text-base font-medium text-white border border-transparent shadow-sm hover:bg-saphire-700 focus:ring-saphire-300 focus:ring-2 focus:ring-offset-2 focus:outline-none'
                 >
                   Learn more
                 </button>

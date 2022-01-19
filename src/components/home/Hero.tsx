@@ -1,39 +1,42 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function Hero() {
   return (
     <main>
       <div>
         {/* Hero card */}
         <div className='relative'>
-          <div className='absolute bg-ujuuuuuuuiiiiiiiiiiiiiiiiiiijjjjjjjjj7-100 bottom-0 h-1/2 inset-x-0' />
+          <div className='bg-ujuuuuuuuiiiiiiiiiiiiiiiiiiijjjjjjjjj7-100 absolute inset-x-0 bottom-0 h-1/2' />
           <div className='mx-auto'>
             <div className='relative shadow-xl sm:overflow-hidden'>
               <div className='absolute inset-0'>
-                <img
-                  className='h-full object-cover w-full'
+                <Image
+                  layout='fill'
+                  className='object-cover w-full h-full'
                   src='/images/hero.jpg'
                   alt='Cargo ship'
                 />
-                <div className='absolute bg-slate-500 inset-0 mix-blend-multiply' />
+                <div className='bg-slate-500 absolute inset-0 mix-blend-multiply' />
               </div>
-              <div className='px-4 py-16 relative sm:px-6 sm:py-24 lg:px-8 lg:py-32'>
-                <h1 className='font-extrabold text-4xl text-center tracking-tight sm:text-5xl lg:text-6xl'>
+              <div className='relative px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32'>
+                <h1 className='text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl'>
                   <span className='block text-white'>
                     Your Reliable Integrated Logistic Partner
                   </span>
                 </h1>
-                <p className='max-w-lg mt-6 mx-auto text-center text-slate-50 text-xl sm:max-w-3xl'>
+                <p className='text-slate-50 mx-auto mt-6 max-w-lg text-xl text-center sm:max-w-3xl'>
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
                   qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                   occaecat fugiat aliqua.
                 </p>
-                <div className='flex justify-center max-w-none mt-10 mx-auto'>
-                  <div className='space-y-4 sm:gap-5 sm:grid-cols-1 sm:inline-grid sm:mx-auto sm:space-y-0'>
-                    <a
-                      href='/contact-us'
-                      className='bg-white border border-transparent flex font-medium items-center justify-center px-4 py-3 shadow-sm text-base text-primary sm:px-8 hover:bg-saphire-50'
-                    >
-                      Contact us
-                    </a>
+                <div className='flex justify-center mx-auto mt-10 max-w-none'>
+                  <div className='space-y-4 sm:inline-grid sm:grid-cols-1 sm:gap-5 sm:mx-auto sm:space-y-0'>
+                    <Link href='/contact-us'>
+                      <a className='text-primary flex justify-center items-center px-4 py-3 text-base font-medium bg-white border border-transparent shadow-sm sm:px-8 hover:bg-saphire-50'>
+                        Contact us
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
