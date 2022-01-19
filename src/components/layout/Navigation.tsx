@@ -1,7 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, PhoneIcon, XIcon } from '@heroicons/react/outline';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
@@ -79,8 +78,7 @@ export default function Navigation() {
               <div className='px-5 pt-5 pb-6'>
                 <div className='flex justify-between items-center'>
                   <div>
-                    <Image
-                      layout='fill'
+                    <img
                       className='w-auto h-8'
                       src='/itl.png'
                       alt='International Total Service & Logistics'
