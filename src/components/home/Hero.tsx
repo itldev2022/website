@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -11,8 +10,7 @@ export default function Hero() {
           <div className='mx-auto'>
             <div className='relative shadow-xl sm:overflow-hidden'>
               <div className='absolute inset-0'>
-                <Image
-                  layout='fill'
+                <img
                   className='object-cover w-full h-full'
                   src='/images/hero.jpg'
                   alt='Cargo ship'

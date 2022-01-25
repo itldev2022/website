@@ -1,11 +1,8 @@
-import Image from 'next/image';
-
 export default function OurMission() {
   return (
     <div className='bg-saphire-800 relative'>
       <div className='absolute inset-0'>
-        <Image
-          layout='fill'
+        <img
           className='object-cover w-full h-full'
           src='/images/mission.jpg'
           alt=''

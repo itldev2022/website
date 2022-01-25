@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const metrics = [
   {
     id: 1,
@@ -33,8 +31,7 @@ export default function Perfomance() {
       <div className='absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full'>
         <div className='w-full h-full xl:grid xl:grid-cols-2'>
           <div className='h-full xl:relative xl:col-start-2'>
-            <Image
-              layout='fill'
+            <img
               className='object-cover w-full h-full opacity-25 xl:absolute xl:inset-0'
               src='/images/perfomance.jpg'
               alt='people looking at container'

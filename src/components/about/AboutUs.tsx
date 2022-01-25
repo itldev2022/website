@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function AboutUs() {
   return (
     <div className='relative my-14'>
@@ -7,8 +5,7 @@ export default function AboutUs() {
         <div className='relative sm:py-16 lg:py-0'>
           <div className='relative px-4 mx-auto max-w-md sm:px-6 sm:max-w-3xl lg:px-0 lg:py-20 lg:max-w-none'>
             <div className='overflow-hidden relative pt-64 pb-10 shadow-xl lg:pt-96'>
-              <Image
-                layout='fill'
+              <img
                 className='object-cover absolute inset-0 w-full h-full'
                 src='/images/about-us.jpg'
                 alt='Cargo container'
