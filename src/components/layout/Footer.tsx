@@ -21,7 +21,7 @@ export default function Footer() {
         </nav>
 
         <p className='text-slate-300 mt-8 text-base text-center'>
-          &copy; 2020 PT. Internasional Total Service & Logistics. All rights
+          &copy; 2022 PT. Internasional Total Service & Logistics. All rights
           reserved.
         </p>
       </div>

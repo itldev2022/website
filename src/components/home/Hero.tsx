@@ -12,7 +12,7 @@ export default function Hero() {
               <div className='absolute inset-0'>
                 <img
                   className='object-cover w-full h-full'
-                  src='/images/hero.jpg'
+                  src='/images/coal-ship.jpg'
                   alt='Cargo ship'
                 />
                 <div className='bg-slate-500 absolute inset-0 mix-blend-multiply' />
