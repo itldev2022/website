@@ -8,7 +8,7 @@ export default function OurMission() {
           alt=''
         />
         <div
-          className='bg-saphire-500 absolute inset-0 mix-blend-multiply'
+          className='from-biruMuda to-biruTua absolute inset-0 bg-gradient-to-bl mix-blend-multiply'
           aria-hidden='true'
         />
       </div>

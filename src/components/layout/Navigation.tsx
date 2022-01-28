@@ -11,8 +11,8 @@ export default function Navigation() {
   const router = useRouter();
 
   return (
-    <header>
-      <Popover className='bg-primary relative'>
+    <header className='sticky top-0 z-50'>
+      <Popover className='from-biruMuda to-biruTua relative bg-gradient-to-bl'>
         <div className='flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10'>
           <div>
             <Link href='/'>
@@ -21,8 +21,8 @@ export default function Navigation() {
                   International Total Service & Logistics
                 </span>
                 <img
-                  className='w-auto h-8 sm:h-6'
-                  src='/itl.png'
+                  className='w-auto h-8'
+                  src='/itlCircle.png'
                   alt='International Total Service & Logistics'
                 />
               </a>
@@ -74,18 +74,18 @@ export default function Navigation() {
             focus
             className='absolute inset-x-0 top-0 z-30 p-2 transition transform origin-top-right md:hidden'
           >
-            <div className='bg-primary divide-slate-400 rounded-lg divide-y-2 ring-1 ring-black ring-opacity-5 shadow-lg'>
+            <div className='from-biruMuda to-biruTua bg-gradient-to-bl ring-1 ring-black ring-opacity-5 shadow-lg'>
               <div className='px-5 pt-5 pb-6'>
                 <div className='flex justify-between items-center'>
                   <div>
                     <img
                       className='w-auto h-8'
-                      src='/itl.png'
+                      src='/itlCircle.png'
                       alt='International Total Service & Logistics'
                     />
                   </div>
                   <div className='-mr-2'>
-                    <Popover.Button className='inline-flex justify-center items-center p-2 rounded-md hover:bg-saphire-800 hover:text-gray-500 focus:ring-slate-500 focus:ring-2 focus:ring-inset focus:outline-none'>
+                    <Popover.Button className='inline-flex justify-center items-center p-2 rounded-md hover:bg-saphire-800 hover:text-slate-500 focus:ring-slate-500 focus:ring-2 focus:ring-inset focus:outline-none'>
                       <span className='sr-only'>Close menu</span>
                       <XIcon
                         className='w-6 h-6 text-white'
@@ -95,7 +95,7 @@ export default function Navigation() {
                   </div>
                 </div>
               </div>
-              <div className='px-5 py-6'>
+              <div className='px-5 py-6 pt-0'>
                 <div className='grid grid-cols-2 gap-4'>
                   {navigation
                     .filter((item) => item.name !== 'Home')
