@@ -35,6 +35,14 @@ export async function getPortInfo() {
       return items;
     })
   );
-  // Sort posts by date
-  return { allPortInfo };
+  const sorted = allPortInfo.sort(({ title: a }, { title: b }) => {
+    if (a > b) {
+      return 1;
+    } else if (a < b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  return { allPortInfo: sorted };
 }
