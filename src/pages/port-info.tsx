@@ -7,6 +7,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 import { getPortInfo, Items } from '@/lib/portInfo';
 
+import AllPortModal from '@/components/port-info/AllPortModal';
 import PortInfoModal from '@/components/port-info/PortModal';
 import Seo from '@/components/Seo';
 
@@ -24,9 +25,19 @@ export default function PortInfo({
     | { isOpen: true; data: Items }
   >({ isOpen: false });
 
+  const [allPortModal, setAllPortModal] = React.useState<boolean>(false);
+
   return (
     <>
       <Seo title='Port Info | International Total Service & Logistics' />
+      <div className='absolute z-10 p-4'>
+        <button
+          onClick={() => setAllPortModal(true)}
+          className='text-primary p-4 font-bold bg-white'
+        >
+          View All Port
+        </button>
+      </div>
       <Map
         containerStyle={{
           height: '100vh',
@@ -60,6 +71,12 @@ export default function PortInfo({
         isOpen={modal.isOpen}
         onClose={() => setModal({ isOpen: false })}
         data={modal.isOpen ? modal.data : undefined}
+      />
+      <AllPortModal
+        isOpen={allPortModal}
+        onClose={() => setAllPortModal(false)}
+        onPortClick={setModal}
+        data={allPortInfo}
       />
     </>
   );

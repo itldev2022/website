@@ -91,48 +91,155 @@ const people = [
 
 export default function Team() {
   return (
-    <div className='bg-slate-50'>
-      <div className='px-4 py-12 mx-auto max-w-7xl text-center sm:px-6 lg:px-8 lg:py-24'>
-        <div className='space-y-8 sm:space-y-12'>
-          <div className='space-y-5 sm:mx-auto sm:space-y-4 sm:max-w-xl lg:max-w-5xl'>
-            <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl'>
-              Our Amazing Team
-            </h2>
+    <>
+      <div className='bg-slate-50'>
+        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
+          <div className='space-y-8 sm:space-y-12'>
+            <div className='grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8'>
+              <div className='space-y-5 sm:space-y-4'>
+                <h2 className='text-2xl font-bold tracking-tight sm:text-3xl'>
+                  Agency Coal Team
+                </h2>
+              </div>
+              <div className='lg:col-span-2'>
+                <ul
+                  role='list'
+                  className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8'
+                >
+                  {people
+                    .filter(
+                      (item) => item.team.search('Agency Coal Team') !== -1
+                    )
+                    .map((person) => (
+                      <li key={person.name}>
+                        <div className='space-y-4'>
+                          <div className='space-y-2'>
+                            <div className='text-lg font-medium leading-6'>
+                              <p className='text-saphire-400 font-normal'>
+                                {person.location}
+                              </p>
+                              <h3 className='font-bold'>{person.name}</h3>
+                              <p className='text-primary'>{person.role}</p>
+
+                              <a
+                                href={`mailto:${person.email}`}
+                                className='text-saphire-500 text-sm'
+                              >
+                                {person.email}
+                              </a>
+                              <p className='text-saphire-400 text-sm'>
+                                {person.phone.replace(/(.{3})/g, '$1 ')}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <ul
-            role='list'
-            className='grid grid-cols-2 gap-x-4 gap-y-8 mx-auto sm:grid-cols-4 md:gap-x-6 lg:gap-x-8 lg:gap-y-12 lg:max-w-5xl xl:grid-cols-4'
-          >
-            {people.map((person) => (
-              <li key={person.name}>
-                <div className='space-y-4'>
-                  <div className='space-y-2'>
-                    <div className='font-medium'>
-                      <p className='text-primary text-xs font-normal'>
-                        {person.team}
-                      </p>
-                      <p className='text-saphire-400 text-xs font-normal'>
-                        {person.location}
-                      </p>
-                      <h3 className='font-bold'>{person.name}</h3>
-                      <p className='text-primary'>{person.role}</p>
-                      <a
-                        href={`mailto:${person.email}`}
-                        className='text-saphire-500 text-xs'
-                      >
-                        {person.email}
-                      </a>
-                      <p className='text-saphire-400 text-xs'>
-                        {person.phone.replace(/(.{3})/g, '$1 ')}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
-    </div>
+      <div className='bg-white'>
+        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
+          <div className='space-y-8 sm:space-y-12'>
+            <div className='grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8'>
+              <div className='space-y-5 sm:space-y-4'>
+                <h2 className='text-2xl font-bold tracking-tight sm:text-3xl'>
+                  Agency General Cargo Team
+                </h2>
+              </div>
+              <div className='lg:col-span-2'>
+                <ul
+                  role='list'
+                  className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8'
+                >
+                  {people
+                    .filter(
+                      (item) =>
+                        item.team.search('Agency General Cargo Team') !== -1
+                    )
+                    .map((person) => (
+                      <li key={person.name}>
+                        <div className='space-y-4'>
+                          <div className='space-y-2'>
+                            <div className='text-lg font-medium leading-6'>
+                              <p className='text-saphire-400 font-normal'>
+                                {person.location}
+                              </p>
+                              <h3 className='font-bold'>{person.name}</h3>
+                              <p className='text-primary'>{person.role}</p>
+
+                              <a
+                                href={`mailto:${person.email}`}
+                                className='text-saphire-500 text-sm'
+                              >
+                                {person.email}
+                              </a>
+                              <p className='text-saphire-400 text-sm'>
+                                {person.phone.replace(/(.{3})/g, '$1 ')}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='bg-slate-50'>
+        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
+          <div className='space-y-8 sm:space-y-12'>
+            <div className='grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8'>
+              <div className='space-y-5 sm:space-y-4'>
+                <h2 className='text-2xl font-bold tracking-tight sm:text-3xl'>
+                  Accounting Team
+                </h2>
+              </div>
+              <div className='lg:col-span-2'>
+                <ul
+                  role='list'
+                  className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8'
+                >
+                  {people
+                    .filter(
+                      (item) => item.team.search('Accounting Team') !== -1
+                    )
+                    .map((person) => (
+                      <li key={person.name}>
+                        <div className='space-y-4'>
+                          <div className='space-y-2'>
+                            <div className='text-lg font-medium leading-6'>
+                              <p className='text-saphire-400 font-normal'>
+                                {person.location}
+                              </p>
+                              <h3 className='font-bold'>{person.name}</h3>
+                              <p className='text-primary'>{person.role}</p>
+
+                              <a
+                                href={`mailto:${person.email}`}
+                                className='text-saphire-500 text-sm'
+                              >
+                                {person.email}
+                              </a>
+                              <p className='text-saphire-400 text-sm'>
+                                {person.phone.replace(/(.{3})/g, '$1 ')}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

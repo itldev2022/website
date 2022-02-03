@@ -1,5 +1,5 @@
 ---
-title: 'Amamapare Port Information'
+title: 'AMAMAPARE PORT INFORMATION'
 latitude: '-4.9193683'
 longitude: '136.7280049'
 ---
