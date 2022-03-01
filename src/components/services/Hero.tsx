@@ -22,8 +22,8 @@ export default function Hero() {
             Our services
           </h2>
           <p className='text-slate-200 mt-5 text-xl'>
-            Praesent eu mi volutpat, cursus ex vel, dignissim ex. Pellentesque
-            arcu neque, tincidunt vel pellentesque a, tristique semper mi.
+            {/* Praesent eu mi volutpat, cursus ex vel, dignissim ex. Pellentesque
+            arcu neque, tincidunt vel pellentesque a, tristique semper mi. */}
           </p>
         </div>
       </div>

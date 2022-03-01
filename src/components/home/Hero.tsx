@@ -24,9 +24,9 @@ export default function Hero() {
                   </span>
                 </h1>
                 <p className='text-slate-50 mx-auto mt-6 max-w-lg text-xl text-center sm:max-w-3xl'>
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                  {/* Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
                   qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                  occaecat fugiat aliqua. */}
                 </p>
                 <div className='flex justify-center mx-auto mt-10 max-w-none'>
                   <div className='space-y-4 sm:inline-grid sm:grid-cols-1 sm:gap-5 sm:mx-auto sm:space-y-0'>

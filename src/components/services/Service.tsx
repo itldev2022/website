@@ -19,7 +19,9 @@ export default function Service(props: {
             <p className='text-3xl font-extrabold text-gray-900'>
               {props.title}
             </p>
-            <p className='mt-4 text-lg text-gray-500'>{props.description}</p>
+            <p className='mt-4 text-lg text-gray-500'>
+              {/* {props.description} */}
+            </p>
           </div>
           <div className='mt-4 sm:mt-8 md:grid md:grid-cols-1 md:gap-x-8 md:mt-10 xl:col-span-1 xl:mt-0'>
             <ul role='list' className='divide-y divide-gray-200'>

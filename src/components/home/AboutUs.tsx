@@ -9,7 +9,7 @@ export default function AboutUs() {
             <div className='overflow-hidden relative pt-64 pb-10 shadow-xl lg:pt-96'>
               <img
                 className='object-cover absolute inset-0 w-full h-full'
-                src='/images/about-us.jpg'
+                src='/images/coalcargo.jpg'
                 alt='Cargo container'
               />
             </div>
