@@ -34,7 +34,7 @@ export default function Navigation() {
               <MenuIcon className='w-6 h-6 text-white' aria-hidden='true' />
             </Popover.Button>
           </div>
-          <div className='hidden md:flex md:flex-1 md:justify-between md:items-center'>
+          <div className='hidden md:flex md:flex-1 md:justify-end md:items-center'>
             <Popover.Group as='nav' className='hidden space-x-10 md:flex'>
               {navigation
                 .filter((item) => item.name !== 'Home')

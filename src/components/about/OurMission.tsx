@@ -17,9 +17,9 @@ export default function OurMission() {
           Our mission
         </h1>
         <p className='mt-6 max-w-3xl text-xl text-indigo-100'>
-          Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
+          {/* Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
           lacus nisi urna, arcu sociis eu. Orci vel lectus nisl eget eget ut
-          consectetur. Sit justo viverra non adipisicing elit.
+          consectetur. Sit justo viverra non adipisicing elit. */}
         </p>
       </div>
     </div>

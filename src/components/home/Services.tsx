@@ -89,7 +89,7 @@ export default function Services() {
                   </p>
                 </dt>
                 <dd className='mt-2 text-base text-gray-500'>
-                  {feature.description}
+                  {/* {feature.description} */}
                 </dd>
               </div>
             ))}

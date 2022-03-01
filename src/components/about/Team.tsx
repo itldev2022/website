@@ -40,12 +40,12 @@ const people = [
     email: 'pabian.kim@itlid.com',
   },
   {
-    name: 'Mr. Faried',
-    role: 'Operation',
-    location: 'Samarinda Branch',
+    name: 'Ms. Julie Lee',
+    role: 'Operation & Marketing',
+    location: 'Jakarta Office',
     team: 'Agency Coal Team',
-    phone: '+6282165065188',
-    email: 'faried@itlid.com',
+    phone: '+628118241517',
+    email: 'julie.lee@itlid.com',
   },
   {
     name: 'Mr. Aditya',
@@ -56,13 +56,14 @@ const people = [
     email: 'aditya@itlid.com',
   },
   {
-    name: 'Ms. Julie Lee',
-    role: 'Operation & Marketing',
-    location: 'Jakarta Office',
+    name: 'Mr. Faried',
+    role: 'Operation',
+    location: 'Samarinda Branch',
     team: 'Agency Coal Team',
-    phone: '+628118241517',
-    email: 'julie.lee@itlid.com',
+    phone: '+6282165065188',
+    email: 'faried@itlid.com',
   },
+
   {
     name: 'Mr. Herry Liao',
     role: 'Marketing Leader',
