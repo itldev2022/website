@@ -19,7 +19,9 @@ module.exports = {
         primary: ['Inter', ...fontFamily.sans],
       },
       colors: {
-        primary: '#1A1F5F',
+        biruTua: '#1A1A4F',
+        biruMuda: '#0300BA',
+        primary: '#1A1A4F',
         secondary: '#ED981A',
         saphire: {
           50: '#f4f4f7',

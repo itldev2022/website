@@ -6,7 +6,7 @@ export default function Hero() {
       <div>
         {/* Hero card */}
         <div className='relative'>
-          <div className='bg-ujuuuuuuuiiiiiiiiiiiiiiiiiiijjjjjjjjj7-100 absolute inset-x-0 bottom-0 h-1/2' />
+          <div className='absolute inset-x-0 bottom-0 h-1/2 bg-gray-100' />
           <div className='mx-auto'>
             <div className='relative shadow-xl sm:overflow-hidden'>
               <div className='absolute inset-0'>
@@ -15,7 +15,7 @@ export default function Hero() {
                   src='/images/coal-ship.jpg'
                   alt='Cargo ship'
                 />
-                <div className='bg-slate-500 absolute inset-0 mix-blend-multiply' />
+                <div className='bg-biruTua/60 absolute inset-0 mix-blend-multiply' />
               </div>
               <div className='relative px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32'>
                 <h1 className='text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl'>

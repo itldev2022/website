@@ -36,7 +36,7 @@ export default function AboutUs() {
               <Link passHref href='/about'>
                 <button
                   type='button'
-                  className='bg-primary inline-flex items-center px-6 py-3 text-base font-medium text-white border border-transparent shadow-sm hover:bg-saphire-700 focus:ring-saphire-300 focus:ring-2 focus:ring-offset-2 focus:outline-none'
+                  className='from-biruMuda to-biruTua inline-flex items-center px-6 py-3 text-base font-medium text-white bg-gradient-to-bl border border-transparent shadow-sm focus:ring-saphire-300 focus:ring-2 focus:ring-offset-2 focus:outline-none'
                 >
                   Learn more
                 </button>

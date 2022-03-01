@@ -2,7 +2,7 @@ import { navigation } from '@/lib/constants';
 
 export default function Footer() {
   return (
-    <footer className='bg-primary'>
+    <footer className='from-biruMuda to-biruTua bg-gradient-to-bl'>
       <div className='overflow-hidden px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8'>
         <nav
           className='flex flex-wrap justify-center -mx-5 -my-2'
