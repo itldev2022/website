@@ -13,10 +13,12 @@ export default function Navigation() {
   const [coloredNav, setColoredNav] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 450) {
-      setColoredNav(true);
-    } else {
-      setColoredNav(false);
+    if (router.pathname === '/') {
+      if (window.scrollY > 450) {
+        setColoredNav(true);
+      } else {
+        setColoredNav(false);
+      }
     }
   };
 
@@ -28,8 +30,10 @@ export default function Navigation() {
     <header className='sticky top-0 z-50'>
       <Popover
         className={`relative ${
-          coloredNav
-            ? 'bg-gradient-to-bl from-biruMuda to-biruTua  '
+          router.pathname !== '/'
+            ? 'bg-gradient-to-bl from-biruMuda to-biruTua'
+            : coloredNav
+            ? 'bg-gradient-to-bl from-biruMuda to-biruTua'
             : 'bg-transparent'
         }`}
       >
@@ -38,7 +42,7 @@ export default function Navigation() {
             <Link href='/'>
               <a className='flex w-[100px]'>
                 <span className='sr-only'>
-                  International Total Service & Logistics
+                  Internasional Total Service & Logistics
                 </span>
                 <img
                   className='h-8'
@@ -48,7 +52,7 @@ export default function Navigation() {
               </a>
             </Link>
             <span className='font-bold font-serif text-sm text-white w-full lg:text-md'>
-              International Total Service & Logistics
+              Internasional Total Service & Logistics
             </span>
           </div>
           <div className='-mr-2 -my-2 md:hidden'>
@@ -62,11 +66,11 @@ export default function Navigation() {
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <a
-                    className={`font-medium text-base ${
+                    className={`transition duration-500 hover:text-white text-base ${
                       router.asPath === item.href
-                        ? 'text-white'
-                        : 'text-slate-300'
-                    } hover:text-slate-400`}
+                        ? 'text-white font-semi'
+                        : 'text-slate-400'
+                    }`}
                   >
                     {item.name}
                   </a>
@@ -96,7 +100,7 @@ export default function Navigation() {
                     <img
                       className='h-8 w-auto'
                       src='/itlCircle.png'
-                      alt='International Total Service & Logistics'
+                      alt='Internasional Total Service & Logistics'
                     />
                   </div>
                   <div className='-mr-2'>
@@ -114,7 +118,13 @@ export default function Navigation() {
                 <div className='gap-4 grid grid-cols-2'>
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
-                      <a className='font-medium text-base text-white hover:text-slate-300'>
+                      <a
+                        className={`font-medium text-base hover:text-slate-300 ${
+                          router.asPath === item.href
+                            ? 'text-white font-semi'
+                            : 'text-slate-400'
+                        }`}
+                      >
                         {item.name}
                       </a>
                     </Link>
