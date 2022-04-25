@@ -34,7 +34,7 @@ export default function Navigation() {
             ? 'bg-gradient-to-bl from-biruMuda to-biruTua'
             : coloredNav
             ? 'bg-gradient-to-bl from-biruMuda to-biruTua'
-            : 'bg-transparent'
+            : 'bg-black bg-opacity-40'
         }`}
       >
         <div className='flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10'>
