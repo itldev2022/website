@@ -23,35 +23,35 @@ const features = [
 
 export default function Strength() {
   return (
-    <div className='relative py-16 bg-white sm:py-24 lg:py-20'>
-      <div className='px-4 mx-auto max-w-md text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl'>
-        <h2 className='text-primary text-base font-semibold tracking-wider uppercase'>
+    <div className='bg-white py-16 relative sm:py-24 lg:py-20'>
+      <div className='max-w-md mx-auto px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
+        <h2 className='font-semibold text-base text-primary tracking-wider uppercase'>
           Strength
         </h2>
-        <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+        <p className='font-extrabold mt-2 text-3xl text-gray-900 tracking-tight sm:text-4xl'>
           Our Remarkable Strength
         </p>
-        <p className='mx-auto mt-5 max-w-prose text-xl text-gray-500'>
+        <p className='max-w-prose mt-5 mx-auto text-gray-500 text-xl'>
           Why people choose us
         </p>
         <div className='mt-12'>
-          <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+          <div className='gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
               <div key={feature.name} className='pt-6'>
-                <div className='bg-saphire-100 flow-root px-6 pb-8'>
+                <div className='bg-saphire-100 flow-root pb-8 px-6'>
                   <div className='-mt-6'>
                     <div>
-                      <span className='from-biruMuda to-biruTua inline-flex justify-center items-center p-3 bg-gradient-to-bl shadow-lg'>
+                      <span className='bg-gradient-to-bl from-biruMuda inline-flex items-center justify-center p-3 shadow-lg to-biruTua'>
                         <feature.icon
-                          className='w-6 h-6 text-white'
+                          className='h-6 text-white w-6'
                           aria-hidden='true'
                         />
                       </span>
                     </div>
-                    <h3 className='mt-8 text-lg font-medium tracking-tight text-gray-900'>
+                    <h3 className='font-medium mt-8 text-gray-900 text-lg tracking-tight'>
                       {feature.name}
                     </h3>
-                    <p className='mt-5 text-base text-gray-500'>
+                    <p className='mt-5 text-base text-gray-800'>
                       {feature.description}
                     </p>
                   </div>

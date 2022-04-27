@@ -17,6 +17,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        serif: ['Open Sans', 'serif'],
       },
       colors: {
         biruTua: '#1A1A4F',

@@ -93,19 +93,19 @@ const people = [
 export default function Team() {
   return (
     <>
-      <div className='bg-slate-50'>
-        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
+      <div className='bg-white'>
+        <div className='max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-24'>
           <div className='space-y-8 sm:space-y-12'>
-            <div className='grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8'>
+            <div className='gap-12 grid grid-cols-1 lg:gap-8 lg:grid-cols-3'>
               <div className='space-y-5 sm:space-y-4'>
-                <h2 className='text-2xl font-bold tracking-tight sm:text-3xl'>
+                <h2 className='font-bold text-2xl tracking-tight sm:text-3xl'>
                   Agency Coal Team
                 </h2>
               </div>
               <div className='lg:col-span-2'>
                 <ul
                   role='list'
-                  className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8'
+                  className='space-y-12 sm:gap-12 sm:grid sm:grid-cols-2 sm:space-y-0 lg:gap-x-8'
                 >
                   {people
                     .filter(
@@ -115,8 +115,58 @@ export default function Team() {
                       <li key={person.name}>
                         <div className='space-y-4'>
                           <div className='space-y-2'>
-                            <div className='text-lg font-medium leading-6'>
-                              <p className='text-saphire-400 font-normal'>
+                            <div className='font-medium leading-6 text-lg'>
+                              <p className='font-normal text-saphire-400'>
+                                {person.location}
+                              </p>
+                              <h3 className='font-bold'>{person.name}</h3>
+                              <p className='text-primary'>{person.role}</p>
+
+                              <a
+                                href={`mailto:${person.email}`}
+                                className='text-saphire-500 text-sm'
+                              >
+                                {person.email}
+                              </a>
+                              <p className='text-saphire-400 text-sm'>
+                                {person.phone.replace(/(.{3})/g, '$1 ')}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='bg-slate-50'>
+        <div className='max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-24'>
+          <div className='space-y-8 sm:space-y-12'>
+            <div className='gap-12 grid grid-cols-1 lg:gap-8 lg:grid-cols-3'>
+              <div className='space-y-5 sm:space-y-4'>
+                <h2 className='font-bold text-2xl tracking-tight sm:text-3xl'>
+                  Agency General Cargo Team
+                </h2>
+              </div>
+              <div className='lg:col-span-2'>
+                <ul
+                  role='list'
+                  className='space-y-12 sm:gap-12 sm:grid sm:grid-cols-2 sm:space-y-0 lg:gap-x-8'
+                >
+                  {people
+                    .filter(
+                      (item) =>
+                        item.team.search('Agency General Cargo Team') !== -1
+                    )
+                    .map((person) => (
+                      <li key={person.name}>
+                        <div className='space-y-4'>
+                          <div className='space-y-2'>
+                            <div className='font-medium leading-6 text-lg'>
+                              <p className='font-normal text-saphire-400'>
                                 {person.location}
                               </p>
                               <h3 className='font-bold'>{person.name}</h3>
@@ -143,68 +193,18 @@ export default function Team() {
         </div>
       </div>
       <div className='bg-white'>
-        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
+        <div className='max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-24'>
           <div className='space-y-8 sm:space-y-12'>
-            <div className='grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8'>
+            <div className='gap-12 grid grid-cols-1 lg:gap-8 lg:grid-cols-3'>
               <div className='space-y-5 sm:space-y-4'>
-                <h2 className='text-2xl font-bold tracking-tight sm:text-3xl'>
-                  Agency General Cargo Team
-                </h2>
-              </div>
-              <div className='lg:col-span-2'>
-                <ul
-                  role='list'
-                  className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8'
-                >
-                  {people
-                    .filter(
-                      (item) =>
-                        item.team.search('Agency General Cargo Team') !== -1
-                    )
-                    .map((person) => (
-                      <li key={person.name}>
-                        <div className='space-y-4'>
-                          <div className='space-y-2'>
-                            <div className='text-lg font-medium leading-6'>
-                              <p className='text-saphire-400 font-normal'>
-                                {person.location}
-                              </p>
-                              <h3 className='font-bold'>{person.name}</h3>
-                              <p className='text-primary'>{person.role}</p>
-
-                              <a
-                                href={`mailto:${person.email}`}
-                                className='text-saphire-500 text-sm'
-                              >
-                                {person.email}
-                              </a>
-                              <p className='text-saphire-400 text-sm'>
-                                {person.phone.replace(/(.{3})/g, '$1 ')}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className='bg-slate-50'>
-        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
-          <div className='space-y-8 sm:space-y-12'>
-            <div className='grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8'>
-              <div className='space-y-5 sm:space-y-4'>
-                <h2 className='text-2xl font-bold tracking-tight sm:text-3xl'>
+                <h2 className='font-bold text-2xl tracking-tight sm:text-3xl'>
                   Accounting Team
                 </h2>
               </div>
               <div className='lg:col-span-2'>
                 <ul
                   role='list'
-                  className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8'
+                  className='space-y-12 sm:gap-12 sm:grid sm:grid-cols-2 sm:space-y-0 lg:gap-x-8'
                 >
                   {people
                     .filter(
@@ -214,8 +214,8 @@ export default function Team() {
                       <li key={person.name}>
                         <div className='space-y-4'>
                           <div className='space-y-2'>
-                            <div className='text-lg font-medium leading-6'>
-                              <p className='text-saphire-400 font-normal'>
+                            <div className='font-medium leading-6 text-lg'>
+                              <p className='font-normal text-saphire-400'>
                                 {person.location}
                               </p>
                               <h3 className='font-bold'>{person.name}</h3>
