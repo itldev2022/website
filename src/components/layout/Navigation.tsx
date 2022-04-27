@@ -51,7 +51,7 @@ export default function Navigation() {
                 />
               </a>
             </Link>
-            <span className='font-bold font-serif text-sm text-white w-full lg:text-md'>
+            <span className='font-bold font-serif text-sm text-white w-full lg:text-[16px]'>
               Internasional Total Service & Logistics
             </span>
           </div>
