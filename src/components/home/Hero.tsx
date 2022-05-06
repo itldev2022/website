@@ -1,12 +1,12 @@
 export default function Hero() {
   return (
     <div className='-mt-[100px]'>
-      <div className='absolute bg-gray-100 bottom-0 h-screen inset-x-0' />
+      <div className='absolute bottom-0 h-screen inset-x-0' />
       <div className='mx-auto'>
         <div className='relative shadow-xl sm:overflow-hidden'>
           <div className='absolute inset-0'>
             <img
-              className='animate-zoomInOut h-full object-cover w-full zoom-in-out'
+              className='animate-zoomInOut h-screen object-cover w-full zoom-in-out'
               src='/images/crane.jpeg'
               alt='Cargo ship'
             />
