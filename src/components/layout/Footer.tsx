@@ -2,10 +2,10 @@ import { navigation } from '@/lib/constants';
 
 export default function Footer() {
   return (
-    <footer className='from-biruMuda to-biruTua bg-gradient-to-bl'>
-      <div className='overflow-hidden px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8'>
+    <footer className='bg-gradient-to-bl from-biruMuda to-biruTua'>
+      <div className='max-w-7xl mx-auto overflow-hidden px-4 py-12 sm:px-6 lg:px-8'>
         <nav
-          className='flex flex-wrap justify-center -mx-5 -my-2'
+          className='-mx-5 -my-2 flex flex-wrap justify-center'
           aria-label='Footer'
         >
           {navigation.map((item) => (
@@ -20,9 +20,9 @@ export default function Footer() {
           ))}
         </nav>
 
-        <p className='text-slate-300 mt-8 text-base text-center'>
-          &copy; 2022 PT. Internasional Total Service & Logistics. All rights
-          reserved.
+        <p className='mt-8 text-base text-center text-slate-300'>
+          &copy; {new Date().getFullYear()} PT. Internasional Total Service &
+          Logistics. All rights reserved.
         </p>
       </div>
     </footer>

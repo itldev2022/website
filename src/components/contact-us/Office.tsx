@@ -111,15 +111,15 @@ const branches = [
 export default function Office() {
   return (
     <div className='bg-white'>
-      <div className='px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
-        <div className='divide-y-2 divide-gray-200'>
-          <div className='lg:grid lg:grid-cols-3 lg:gap-8'>
-            <h2 className='text-2xl font-extrabold text-gray-900 sm:text-3xl'>
+      <div className='max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24'>
+        <div className='divide-gray-200 divide-y-2'>
+          <div className='lg:gap-8 lg:grid lg:grid-cols-3'>
+            <h2 className='font-extrabold text-2xl text-gray-900 sm:text-3xl'>
               Head Office
             </h2>
-            <div className='grid grid-cols-1 gap-12 mt-8 sm:grid-cols-1 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0'>
+            <div className='gap-12 grid grid-cols-1 mt-8 sm:gap-x-8 sm:gap-y-12 sm:grid-cols-1 lg:col-span-2 lg:mt-0'>
               <div>
-                <h3 className='text-lg font-medium leading-6 text-gray-900'>
+                <h3 className='font-medium leading-6 text-gray-900 text-lg'>
                   ITL Jakarta - Indonesia
                 </h3>
                 <dl className='mt-2 text-base text-gray-500'>
@@ -135,45 +135,54 @@ export default function Office() {
                   </div>
                   <div className='mt-1'>
                     <dd className='flex flex-row'>
-                      <div className='w-12'>
+                      <div className='w-24'>
                         <span>Phone</span>
                       </div>
                       <span>:</span>
                       <span className='ml-2'>+62 215 011 2120</span>
                     </dd>
                     <dd className='flex flex-row'>
-                      <div className='w-12'>
-                        <span>Fax</span>
-                      </div>
-                      <span>:</span>
-                      <span className='ml-2'>+62 215 011 2121</span>
-                    </dd>
-                    <dd className='flex flex-row'>
-                      <div className='w-12'>
-                        <span>Telex</span>
-                      </div>
-                      <span>:</span>
-                      <span className='ml-2'>767095 ITLID IA</span>
-                    </dd>
-                    <dd className='flex flex-row'>
-                      <div className='w-12'>
+                      <div className='w-24'>
                         <span>Email</span>
                       </div>
                       <span>:</span>
-                      <span className='ml-2'>agency@itlid.com</span>
+                      <span className='ml-2'>
+                        agency@itlid.com / agency2@itlid.com
+                      </span>
+                    </dd>
+                    <dd className='flex flex-row mt-2'>
+                      <div className='w-32'>
+                        <span> Emergency Call </span>
+                      </div>
+                    </dd>
+                    <dd className='flex flex-row mt-1'>
+                      <div className='w-24'>
+                        <span>Coal</span>
+                      </div>
+                      <span>:</span>
+                      <span className='ml-2'>Galdrin (+62 812-2176-1079)</span>
+                    </dd>
+                    <dd className='flex flex-row'>
+                      <div className='w-24'>
+                        <span> Non coal </span>
+                      </div>
+                      <span>:</span>
+                      <span className='ml-2'>
+                        Herry Liao (+62 811-1923-512)
+                      </span>
                     </dd>
                   </div>
                 </dl>
               </div>
             </div>
           </div>
-          <div className='grid grid-cols-1 gap-12 pt-16 mt-16 sm:gap-x-8 sm:gap-y-12 lg:grid lg:grid-cols-3 lg:gap-8'>
-            <h2 className='text-2xl font-extrabold text-gray-900 sm:text-3xl'>
+          <div className='gap-12 grid grid-cols-1 mt-16 pt-16 sm:gap-x-8 sm:gap-y-12 lg:gap-8 lg:grid lg:grid-cols-2'>
+            <h2 className='font-extrabold text-2xl text-gray-900 sm:text-3xl'>
               Branches
             </h2>
             {branches.map((item, index) => (
               <div key={index}>
-                <h3 className='text-lg font-medium leading-6 text-gray-900'>
+                <h3 className='font-medium leading-6 text-gray-900 text-lg'>
                   {item.title}
                 </h3>
                 <div className='mt-2 text-base text-gray-500'>
@@ -183,7 +192,7 @@ export default function Office() {
                 <div className='mt-1 text-base text-gray-500'>
                   {item.phone && (
                     <dd className='flex flex-row'>
-                      <div className='w-12'>
+                      <div className='w-16'>
                         <span>Phone</span>
                       </div>
                       <span>:</span>
@@ -192,8 +201,8 @@ export default function Office() {
                   )}
                   {item.fax && (
                     <dd className='flex flex-row'>
-                      <div className='w-12'>
-                        <span>Phone</span>
+                      <div className='w-16'>
+                        <span>Fax</span>
                       </div>
                       <span>:</span>
                       <span className='ml-2'>{item.fax}</span>
@@ -201,7 +210,7 @@ export default function Office() {
                   )}
                   {item.mobile && (
                     <dd className='flex flex-row'>
-                      <div className='w-12'>
+                      <div className='w-16'>
                         <span>Mobile</span>
                       </div>
                       <span>:</span>
@@ -210,7 +219,7 @@ export default function Office() {
                   )}
                   {item.pic && (
                     <dd className='flex flex-row'>
-                      <div className='w-12'>
+                      <div className='w-16'>
                         <span>PIC</span>
                       </div>
                       <span>:</span>
@@ -219,7 +228,7 @@ export default function Office() {
                   )}
                   {item.email && (
                     <dd className='flex flex-row'>
-                      <div className='w-12'>
+                      <div className='w-16'>
                         <span>Email</span>
                       </div>
                       <span>:</span>

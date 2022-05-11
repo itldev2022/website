@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import Seo from '@/components/Seo';
-import Fleet from '@/components/services/Fleet';
 import Hero from '@/components/services/Hero';
 import Service from '@/components/services/Service';
 
@@ -68,7 +67,6 @@ export default function ServicesPage() {
       <Service {...stevedoring} />
       <Service {...containersForwarding} />
       <Service {...broking} />
-      <Fleet />
     </>
   );
 }
