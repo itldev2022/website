@@ -1,17 +1,19 @@
 import * as React from 'react';
 
 import AboutUs from '@/components/about/AboutUs';
-import Leadership from '@/components/about/Leadership';
-import Team from '@/components/about/Team';
 import Seo from '@/components/Seo';
 
 export default function AboutPage() {
   return (
     <>
       <Seo title='About us | International Total Service & Logistics' />
+      <div className=''>
+        <img src='/vision.png' alt='' />
+      </div>
       <AboutUs />
-      <Leadership />
-      <Team />
+      <div className='container mx-auto p-4 pb-12'>
+        <img src='/management.jpeg' alt='' />
+      </div>
     </>
   );
 }
