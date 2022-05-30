@@ -1,6 +1,17 @@
 export const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
+  {
+    name: 'About Us',
+    href: '/about-us',
+    subMenu: [
+      { name: 'Overview', href: '/about-us' },
+      { name: 'Our Mission & Vision', href: '/about-us/mission-and-vision' },
+      {
+        name: 'Organizational Structure',
+        href: '/about-us/organizational-structure',
+      },
+    ],
+  },
   { name: 'Services', href: '/services' },
   { name: 'Port Info', href: '/port-info' },
   { name: 'Newsletter', href: '/newsletter' },
