@@ -70,7 +70,7 @@ export default function Navigation() {
             <Popover.Group as='nav' className='hidden space-x-10 md:flex'>
               {navigation.map((item) =>
                 item.subMenu ? (
-                  <Popover className='relative'>
+                  <Popover className='relative' key={item.name}>
                     {({ open }: { open: boolean }) => (
                       <>
                         <Popover.Button
@@ -102,9 +102,9 @@ export default function Navigation() {
                           leaveFrom='opacity-100 translate-y-0'
                           leaveTo='opacity-0 translate-y-1'
                         >
-                          <Popover.Panel className='-ml-4 absolute max-w-md mt-3 px-2 transform w-screen z-10 sm:px-0 lg:-translate-x-1/2 lg:left-1/2 lg:ml-0'>
+                          <Popover.Panel className='-ml-4 absolute max-w-sm mt-3 px-2 transform w-screen z-10 sm:px-0 lg:-translate-x-1/2 lg:left-1/2 lg:ml-0'>
                             <div className='overflow-hidden ring-1 ring-black ring-opacity-5 rounded-lg shadow-lg'>
-                              <div className='bg-white gap-6 grid px-5 py-6 relative sm:gap-8 sm:p-8'>
+                              <div className='bg-white gap-6 grid px-2 py-6 relative sm:gap-8 sm:p-4'>
                                 {item.subMenu.map((item) => (
                                   <a
                                     key={item.name}
@@ -187,6 +187,7 @@ export default function Navigation() {
                             ? 'text-white font-semi'
                             : 'text-slate-400'
                         } `}
+                        key={item.name}
                       >
                         <span onClick={() => setAboutOpen(!isAboutOpen)}>
                           {item.name}

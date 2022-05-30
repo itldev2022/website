@@ -7,7 +7,7 @@ export default function AboutPage() {
     <>
       <Seo title='Organizational Structure | International Total Service & Logistics' />
 
-      <div className='container max-w-4xl mx-auto p-4 pb-12'>
+      <div className='container max-w-4xl mx-auto my-20'>
         <img src='/management.jpeg' alt='' />
       </div>
     </>
