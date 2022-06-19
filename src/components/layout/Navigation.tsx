@@ -75,7 +75,9 @@ export default function Navigation() {
                       <>
                         <Popover.Button
                           className={classNames(
-                            open || router.asPath.search(item.href) === 0
+                            open ||
+                              (item.href &&
+                                router.asPath.search(item.href) === 0)
                               ? 'text-white'
                               : 'text-slate-400',
                             'font-medium group inline-flex items-center rounded-md text-base hover:text-white focus:outline-none '
@@ -84,7 +86,9 @@ export default function Navigation() {
                           <span>{item.name}</span>
                           <ChevronDownIcon
                             className={classNames(
-                              open || router.asPath.search(item.href) === 0
+                              open ||
+                                (item.href &&
+                                  router.asPath.search(item.href) === 0)
                                 ? 'text-white'
                                 : 'text-slate-400',
                               'h-5 ml-2 w-5 group-hover:text-white'
@@ -183,7 +187,7 @@ export default function Navigation() {
                     item.subMenu ? (
                       <div
                         className={`flex flex-col gap-2 ${
-                          router.asPath.search(item.href) === 0
+                          item.href && router.asPath.search(item.href) === 0
                             ? 'text-white font-semi'
                             : 'text-slate-400'
                         } `}
