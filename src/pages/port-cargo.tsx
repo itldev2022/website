@@ -5,10 +5,11 @@ import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-import { getPortInfo, Items } from '@/lib/portInfo';
+import { fetchAPI } from '@/lib/datocms';
+import { Items } from '@/lib/portInfo';
+import { PORT_INFO_CARGO_QUERY } from '@/lib/queries';
 
-import AllPortModal from '@/components/port-info/AllPortModal';
-import PortInfoModal from '@/components/port-info/PortModal';
+import PortInfoCargo from '@/components/port-info/PortCargoModal';
 import Seo from '@/components/Seo';
 
 const Map = ReactMapboxGl({
@@ -16,7 +17,7 @@ const Map = ReactMapboxGl({
 });
 
 export default function PortInfo({
-  allPortInfo,
+  data: props,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [modal, setModal] = React.useState<
     | {
@@ -25,19 +26,19 @@ export default function PortInfo({
     | { isOpen: true; data: Items }
   >({ isOpen: false });
 
-  const [allPortModal, setAllPortModal] = React.useState<boolean>(false);
-
+  // const [allPortModal, setAllPortModal] = React.useState<boolean>(false);
+  const data = props.allPortNonCoals;
   return (
     <>
       <Seo title='Port Info | International Total Service & Logistics' />
-      <div className='absolute z-10 p-4'>
+      {/* <div className='absolute p-4 z-10'>
         <button
           onClick={() => setAllPortModal(true)}
-          className='text-primary p-4 font-bold bg-white'
+          className='bg-white font-bold p-4 text-primary'
         >
           View All Port
         </button>
-      </div>
+      </div> */}
       <Map
         containerStyle={{
           height: '100vh',
@@ -48,17 +49,17 @@ export default function PortInfo({
         zoom={[4.5]}
       >
         <>
-          {allPortInfo.map((item, index) => {
+          {data.map((item: any) => {
             return (
               <Marker
-                key={index}
+                key={item.id}
                 coordinates={[
-                  parseFloat(item.longitude),
-                  parseFloat(item.latitude),
+                  parseFloat(item.coordinate.longitude),
+                  parseFloat(item.coordinate.latitude),
                 ]}
               >
                 <LocationMarkerIcon
-                  className='text-primary w-6 h-6 cursor-pointer'
+                  className='cursor-pointer h-6 text-primary w-6'
                   aria-hidden='true'
                   onClick={() => setModal({ isOpen: true, data: item })}
                 />
@@ -67,26 +68,24 @@ export default function PortInfo({
           })}
         </>
       </Map>
-      <PortInfoModal
+      <PortInfoCargo
         isOpen={modal.isOpen}
         onClose={() => setModal({ isOpen: false })}
         data={modal.isOpen ? modal.data : undefined}
       />
-      <AllPortModal
+      {/* <AllPortModal
         isOpen={allPortModal}
         onClose={() => setAllPortModal(false)}
         onPortClick={setModal}
         data={allPortInfo}
-      />
+      /> */}
     </>
   );
 }
-export async function getStaticProps() {
-  const { allPortInfo } = await getPortInfo();
 
+export async function getStaticProps() {
+  const data = await fetchAPI(PORT_INFO_CARGO_QUERY);
   return {
-    props: {
-      allPortInfo,
-    },
+    props: { data },
   };
 }

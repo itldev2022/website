@@ -13,7 +13,13 @@ export const navigation = [
     ],
   },
   { name: 'Services', href: '/services' },
-  { name: 'Port Info', href: '/port-info' },
+  {
+    name: 'Port Info',
+    subMenu: [
+      { name: 'General Cargo', href: '/port-cargo' },
+      { name: 'Coal', href: '/port-coal' },
+    ],
+  },
   { name: 'Newsletter', href: '/newsletter' },
   // { name: 'Customers', href: '/customers' },
 
