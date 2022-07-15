@@ -17,7 +17,7 @@ export default function PortInfoCoal({
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
         as='div'
-        className='fixed inset-0 overflow-y-auto z-10'
+        className='fixed inset-0 overflow-y-auto z-[999]'
         onClose={onClose}
       >
         <div className='flex items-end justify-center min-h-screen pb-20 pt-4 px-4 text-center sm:block sm:p-0'>
