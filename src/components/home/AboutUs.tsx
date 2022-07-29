@@ -33,7 +33,7 @@ export default function AboutUs() {
                 and branch offices all over Asia and is also a member of the
                 Indonesian National Shipowner’s Association (INSA)
               </p>
-              <Link passHref href='/about'>
+              <Link passHref href='/about-us'>
                 <button
                   type='button'
                   className='bg-gradient-to-bl border border-transparent font-medium from-biruMuda inline-flex items-center px-6 py-3 shadow-sm text-base text-white to-biruTua focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-saphire-300'
