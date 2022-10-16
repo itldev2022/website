@@ -18,6 +18,8 @@ module.exports = {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
         serif: ['Open Sans', 'serif'],
+        lato: ['Lato', 'sans-serif'],
+        playFair: ['Playfair Display', 'serif'],
       },
       colors: {
         biruTua: '#1A1A4F',
