@@ -9,6 +9,7 @@ import { fetchAPI } from '@/lib/datocms';
 import { Items } from '@/lib/portInfo';
 import { PORT_INFO_COAL_QUERY } from '@/lib/queries';
 
+import AllPortModal from '@/components/port-info/AllPortModal';
 import PortInfoCoal from '@/components/port-info/PortCoalModal';
 import Seo from '@/components/Seo';
 
@@ -26,19 +27,19 @@ export default function PortInfo({
     | { isOpen: true; data: Items }
   >({ isOpen: false });
 
-  // const [allPortModal, setAllPortModal] = React.useState<boolean>(false);
+  const [allPortModal, setAllPortModal] = React.useState<boolean>(false);
   const data = props.allPortCoals;
   return (
     <>
       <Seo title='Port Info | International Total Service & Logistics' />
-      {/* <div className='absolute p-4 z-10'>
+      <div className='absolute p-4 z-10'>
         <button
           onClick={() => setAllPortModal(true)}
           className='bg-white font-bold p-4 text-primary'
         >
-          View All Port
+          View All
         </button>
-      </div> */}
+      </div>
       <Map
         containerStyle={{
           height: '100vh',
@@ -61,7 +62,9 @@ export default function PortInfo({
                 <LocationMarkerIcon
                   className='cursor-pointer h-6 text-primary w-6'
                   aria-hidden='true'
-                  onClick={() => setModal({ isOpen: true, data: item })}
+                  onClick={() =>
+                    item.pdf.url && window.open(item.pdf.url, '_blank')
+                  }
                 />
               </Marker>
             );
@@ -73,12 +76,11 @@ export default function PortInfo({
         onClose={() => setModal({ isOpen: false })}
         data={modal.isOpen ? modal.data : undefined}
       />
-      {/* <AllPortModal
+      <AllPortModal
         isOpen={allPortModal}
         onClose={() => setAllPortModal(false)}
-        onPortClick={setModal}
-        data={allPortInfo}
-      /> */}
+        data={data}
+      />
     </>
   );
 }

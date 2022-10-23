@@ -8,31 +8,20 @@ export default function AllPortModal({
   isOpen,
   onClose,
   data,
-  onPortClick,
 }: {
   isOpen: boolean;
   onClose: () => unknown;
-  onPortClick: React.Dispatch<
-    React.SetStateAction<
-      | {
-          isOpen: false;
-        }
-      | {
-          isOpen: true;
-          data: Items;
-        }
-    >
-  >;
+
   data?: Items[];
 }) {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
         as='div'
-        className='overflow-y-auto fixed inset-0 z-10'
+        className='fixed inset-0 overflow-y-auto z-10'
         onClose={onClose}
       >
-        <div className='flex justify-center items-end px-4 pt-4 pb-20 min-h-screen text-center sm:block sm:p-0'>
+        <div className='flex items-end justify-center min-h-screen pb-20 pt-4 px-4 text-center sm:block sm:p-0'>
           <Transition.Child
             as={Fragment}
             enter='ease-out duration-300'
@@ -42,12 +31,12 @@ export default function AllPortModal({
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Dialog.Overlay className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
+            <Dialog.Overlay className='bg-gray-500 bg-opacity-75 fixed inset-0 transition-opacity' />
           </Transition.Child>
 
           {/* This element is to trick the browser into centering the modal contents. */}
           <span
-            className='hidden sm:inline-block sm:h-screen sm:align-middle'
+            className='hidden sm:align-middle sm:h-screen sm:inline-block'
             aria-hidden='true'
           >
             &#8203;
@@ -61,22 +50,22 @@ export default function AllPortModal({
             leaveFrom='opacity-100 translate-y-0 sm:scale-100'
             leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
           >
-            <div className='inline-block overflow-hidden px-4 pt-5 pb-4 text-left align-bottom bg-white shadow-xl transition-all transform sm:p-6 sm:my-8 sm:w-full sm:max-w-3xl sm:align-middle'>
-              <div className='hidden absolute top-0 right-0 pt-4 pr-4 sm:block'>
+            <div className='align-bottom bg-white inline-block overflow-hidden pb-4 pt-5 px-4 shadow-xl text-left transform transition-all sm:align-middle sm:max-w-3xl sm:my-8 sm:p-6 sm:w-full'>
+              <div className='absolute hidden pr-4 pt-4 right-0 top-0 sm:block'>
                 <button
                   type='button'
-                  className='text-gray-400 bg-white hover:text-gray-500'
+                  className='bg-white text-gray-400 hover:text-gray-500'
                   onClick={onClose}
                 >
                   <span className='sr-only'>Close</span>
-                  <XIcon className='w-6 h-6' aria-hidden='true' />
+                  <XIcon className='h-6 w-6' aria-hidden='true' />
                 </button>
               </div>
               <div className='flex items-start'>
                 <div className='mt-0 text-left'>
                   <Dialog.Title
                     as='h3'
-                    className='text-lg font-medium leading-6 text-gray-900'
+                    className='font-medium leading-6 text-gray-900 text-lg'
                   >
                     All Port
                   </Dialog.Title>
@@ -86,12 +75,15 @@ export default function AllPortModal({
                         key={index}
                         onClick={() => {
                           onClose();
-                          onPortClick({ isOpen: true, data: item });
                         }}
                       >
-                        <span className='cursor-pointer hover:text-primary'>
-                          {item.title}
-                        </span>
+                        <a
+                          href={item.pdf?.url || '#'}
+                          target='_blank'
+                          rel='noreferrer'
+                        >
+                          {item.name}
+                        </a>
                       </li>
                     ))}
                   </div>

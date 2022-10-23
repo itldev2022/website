@@ -4,7 +4,7 @@ import path from 'path';
 
 import { markdownToHtml } from '@/lib/markdownToHtml';
 export type Items = {
-  [key: string]: string;
+  [key: string]: any;
 };
 const portInfoDirectory = path.join(process.cwd(), 'port-info');
 
