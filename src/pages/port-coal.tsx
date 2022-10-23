@@ -63,7 +63,7 @@ export default function PortInfo({
                   className='cursor-pointer h-6 text-primary w-6'
                   aria-hidden='true'
                   onClick={() =>
-                    item.pdf.url && window.open(item.pdf.url, '_blank')
+                    item.pdf?.url && window.open(item.pdf.url, '_blank')
                   }
                 />
               </Marker>
