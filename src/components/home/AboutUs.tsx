@@ -21,7 +21,7 @@ export default function AboutUs() {
             <h2 className='font-extrabold text-3xl text-gray-900 tracking-tight sm:text-4xl'>
               About us
             </h2>
-            <div className='font-lato font-light mt-6 space-y-6 text-gray-800'>
+            <div className='font-lato font-light mt-6 space-y-6 text-gray-800 text-justify'>
               <p className='text-lg'>
                 PT. Internasional Total Service & Logistics (ITL) was
                 established in 2006 to serve the growing demand for shipping and

@@ -51,7 +51,7 @@ export default function Strength() {
                     <h3 className='font-black font-lato mt-8 text-gray-900 text-lg tracking-tight'>
                       {feature.name}
                     </h3>
-                    <p className='font-lato font-light mt-5 text-base text-gray-800'>
+                    <p className='font-lato font-light mt-5 text-base text-gray-800 text-justify'>
                       {feature.description}
                     </p>
                   </div>

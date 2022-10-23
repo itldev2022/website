@@ -84,7 +84,7 @@ export default function Services() {
                   <div className='bg-gradient-to-bl flex from-biruMuda h-12 items-center justify-center text-white to-biruTua w-12'>
                     <feature.icon className='h-6 w-6' aria-hidden='true' />
                   </div>
-                  <p className='font-black font-lato leading-6 mt-5 text-gray-900 text-lg'>
+                  <p className='font-black font-lato leading-6 mt-5 text-gray-900 text-lg uppercase'>
                     {feature.name}
                   </p>
                 </dt>
