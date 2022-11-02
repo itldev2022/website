@@ -35,10 +35,10 @@ const features = [
 
 export default function Services() {
   return (
-    <div className='overflow-hidden bg-gray-100'>
-      <div className='relative px-4 py-12 mx-auto max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
+    <div className='bg-gray-100 overflow-hidden'>
+      <div className='max-w-3xl mx-auto px-4 py-12 relative sm:px-6 lg:max-w-7xl lg:px-8'>
         <svg
-          className='absolute top-0 left-full transform -translate-x-1/2 -translate-y-3/4 lg:right-full lg:left-auto lg:translate-x-2/3 lg:translate-y-1/4'
+          className='-translate-x-1/2 -translate-y-3/4 absolute left-full top-0 transform lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4'
           width={404}
           height={784}
           fill='none'
@@ -71,20 +71,20 @@ export default function Services() {
           />
         </svg>
 
-        <div className='relative lg:grid lg:grid-cols-3 lg:gap-x-8'>
+        <div className='relative lg:gap-x-8 lg:grid lg:grid-cols-3'>
           <div className='lg:col-span-1'>
-            <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+            <h2 className='font-extrabold text-3xl text-gray-900 tracking-tight sm:text-4xl'>
               Our Services
             </h2>
           </div>
-          <dl className='mt-10 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 sm:space-y-0 lg:col-span-2 lg:mt-0'>
+          <dl className='mt-10 space-y-10 sm:gap-x-8 sm:gap-y-10 sm:grid sm:grid-cols-2 sm:space-y-0 lg:col-span-2 lg:mt-0'>
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt>
-                  <div className='from-biruMuda to-biruTua flex justify-center items-center w-12 h-12 text-white bg-gradient-to-bl'>
-                    <feature.icon className='w-6 h-6' aria-hidden='true' />
+                  <div className='bg-gradient-to-bl flex from-biruMuda h-12 items-center justify-center text-white to-biruTua w-12'>
+                    <feature.icon className='h-6 w-6' aria-hidden='true' />
                   </div>
-                  <p className='mt-5 text-lg font-medium leading-6 text-gray-900'>
+                  <p className='font-black font-lato leading-6 mt-5 text-gray-900 text-lg uppercase'>
                     {feature.name}
                   </p>
                 </dt>

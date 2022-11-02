@@ -119,10 +119,10 @@ export default function Office() {
             </h2>
             <div className='gap-12 grid grid-cols-1 mt-8 sm:gap-x-8 sm:gap-y-12 sm:grid-cols-1 lg:col-span-2 lg:mt-0'>
               <div>
-                <h3 className='font-medium leading-6 text-gray-900 text-lg'>
+                <h3 className='font-black font-lato leading-6 text-gray-900 text-lg'>
                   ITL Jakarta - Indonesia
                 </h3>
-                <dl className='mt-2 text-base text-gray-500'>
+                <dl className='font-lato font-light mt-2 text-base text-gray-500'>
                   <div>
                     <dd>
                       Prosperity Tower, 11th Floor Unit A&J District 8 SCBD Lot
@@ -182,14 +182,14 @@ export default function Office() {
             </h2>
             {branches.map((item, index) => (
               <div key={index}>
-                <h3 className='font-medium leading-6 text-gray-900 text-lg'>
+                <h3 className='font-black font-lato leading-6 text-gray-900 text-lg'>
                   {item.title}
                 </h3>
-                <div className='mt-2 text-base text-gray-500'>
+                <div className='font-lato font-light mt-2 text-base text-gray-500'>
                   {item.building && <p>{item.building}</p>}
                   {item.address && <p className='mt-1'>{item.address}</p>}
                 </div>
-                <div className='mt-1 text-base text-gray-500'>
+                <div className='font-lato font-light mt-1 text-base text-gray-500'>
                   {item.phone && (
                     <dd className='flex flex-row'>
                       <div className='w-16'>

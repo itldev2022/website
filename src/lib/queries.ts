@@ -14,6 +14,9 @@ export const PORT_INFO_CARGO_QUERY = `query PortCargo
       latitude
       longitude
     }
+    pdf {
+      url
+    }
   }
 }`;
 
@@ -33,6 +36,9 @@ export const PORT_INFO_COAL_QUERY = `query PortCargo {
     mainShippers
     estPortDa
     norTenderToCommenceLoading
+    pdf {
+      url
+    }
   }
 } 
 `;

@@ -32,7 +32,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <header className='sticky top-0 z-50'>
+    <header className='font-black font-lato sticky top-0 z-50'>
       <Popover
         className={`relative ${
           router.pathname !== '/'
@@ -80,10 +80,12 @@ export default function Navigation() {
                                 router.asPath.search(item.href) === 0)
                               ? 'text-white'
                               : 'text-slate-400',
-                            'font-medium group inline-flex items-center rounded-md text-base hover:text-white focus:outline-none '
+                            ' group inline-flex items-center rounded-md text-base hover:text-white focus:outline-none '
                           )}
                         >
-                          <span>{item.name}</span>
+                          <span className='font-black font-lato'>
+                            {item.name}
+                          </span>
                           <ChevronDownIcon
                             className={classNames(
                               open ||
@@ -116,7 +118,7 @@ export default function Navigation() {
                                     className='-m-3 flex items-start p-3 rounded-lg hover:bg-gray-50'
                                   >
                                     <div className='ml-4'>
-                                      <p className='font-medium text-base text-gray-900'>
+                                      <p className='text-base text-gray-900'>
                                         {item.name}
                                       </p>
                                     </div>
@@ -134,7 +136,7 @@ export default function Navigation() {
                     <a
                       className={`transition duration-500 hover:text-white text-base ${
                         router.asPath === item.href
-                          ? 'text-white font-semi'
+                          ? 'text-white '
                           : 'text-slate-400'
                       }`}
                     >
@@ -188,7 +190,7 @@ export default function Navigation() {
                       <div
                         className={`flex flex-col gap-2 ${
                           item.href && router.asPath.search(item.href) === 0
-                            ? 'text-white font-semi'
+                            ? 'text-white '
                             : 'text-slate-400'
                         } `}
                         key={item.name}
@@ -201,9 +203,9 @@ export default function Navigation() {
                             {item.subMenu.map((link) => (
                               <Link key={link.name} href={link.href || ''}>
                                 <a
-                                  className={`font-medium text-xs hover:text-slate-300 ${
+                                  className={` text-xs hover:text-slate-300 ${
                                     router.asPath === link.href
-                                      ? 'text-white font-semi'
+                                      ? 'text-white '
                                       : 'text-slate-400'
                                   }`}
                                 >
@@ -217,9 +219,9 @@ export default function Navigation() {
                     ) : (
                       <Link key={item.name} href={item.href || ''}>
                         <a
-                          className={`font-medium text-base hover:text-slate-300 ${
+                          className={` text-base hover:text-slate-300 ${
                             router.asPath === item.href
-                              ? 'text-white font-semi'
+                              ? 'text-white '
                               : 'text-slate-400'
                           }`}
                         >
