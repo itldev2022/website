@@ -52,7 +52,7 @@ export default function Navigation() {
                 <img
                   className='h-8'
                   src='/itlCircle.png'
-                  alt='International Total Service & Logistics'
+                  alt='Internasional Total Service & Logistics'
                 />
               </a>
             </Link>

@@ -11,7 +11,7 @@ export default function Customers({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Seo title='Customers | International Total Service & Logistics' />
+      <Seo title='Customers | Internasional Total Service & Logistics' />
       <LogoClouds title='Buyers' images={allLogo.buyers} />
       <LogoClouds title='Carriers' images={allLogo.carriers} />
       <LogoClouds title='Suppliers' images={allLogo.suppliers} />

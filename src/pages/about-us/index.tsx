@@ -6,7 +6,7 @@ import Seo from '@/components/Seo';
 export default function AboutPage() {
   return (
     <>
-      <Seo title='About Us | International Total Service & Logistics' />
+      <Seo title='About Us | Internasional Total Service & Logistics' />
 
       <AboutUs />
     </>

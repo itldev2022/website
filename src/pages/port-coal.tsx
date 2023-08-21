@@ -31,7 +31,7 @@ export default function PortInfo({
   const data = props.allPortCoals;
   return (
     <>
-      <Seo title='Port Info | International Total Service & Logistics' />
+      <Seo title='Port Info | Internasional Total Service & Logistics' />
       <div className='absolute p-4 z-10'>
         <button
           onClick={() => setAllPortModal(true)}

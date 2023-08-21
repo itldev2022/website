@@ -61,7 +61,7 @@ const broking = {
 export default function ServicesPage() {
   return (
     <>
-      <Seo title='Services | International Total Service & Logistics' />
+      <Seo title='Services | Internasional Total Service & Logistics' />
       <Hero />
       <Service {...agencyServices} />
       <Service {...stevedoring} />
