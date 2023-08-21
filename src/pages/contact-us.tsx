@@ -6,7 +6,7 @@ import Seo from '@/components/Seo';
 export default function ContactUs() {
   return (
     <>
-      <Seo title='Contact us | International Total Service & Logistics' />
+      <Seo title='Contact us | Internasional Total Service & Logistics' />
       <Office />
     </>
   );

@@ -11,7 +11,7 @@ export default function Newsletter({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Seo title='Newsletter | International Total Service & Logistics' />
+      <Seo title='Newsletter | Internasional Total Service & Logistics' />
       <List newsletters={newsletters} />
     </>
   );

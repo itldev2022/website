@@ -2,8 +2,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const defaultMeta = {
-  title: 'International Total Service & Logistics',
-  siteName: 'International Total Service & Logistics',
+  title: 'Internasional Total Service & Logistics',
+  siteName: 'Internasional Total Service & Logistics',
   description: 'Your Reliable Integrated Logistic Partner',
   url: 'https://itlid.com',
   type: 'website',
