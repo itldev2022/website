@@ -160,7 +160,7 @@ export default function Office() {
                         <span>Coal</span>
                       </div>
                       <span>:</span>
-                      <span className='ml-2'>Atya (+62 812-18582186)</span>
+                      <span className='ml-2'>Aryo (+62 812-3546-7866)</span>
                     </dd>
                     <dd className='flex flex-row'>
                       <div className='w-24'>
