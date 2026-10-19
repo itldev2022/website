@@ -150,27 +150,6 @@ export default function Office() {
                         agency@itlid.com / agency2@itlid.com
                       </span>
                     </dd>
-                    <dd className='flex flex-row mt-2'>
-                      <div className='w-32'>
-                        <span> Emergency Call </span>
-                      </div>
-                    </dd>
-                    <dd className='flex flex-row mt-1'>
-                      <div className='w-24'>
-                        <span>Coal</span>
-                      </div>
-                      <span>:</span>
-                      <span className='ml-2'>Aryo (+62 812-3546-7866)</span>
-                    </dd>
-                    <dd className='flex flex-row'>
-                      <div className='w-24'>
-                        <span> Non coal </span>
-                      </div>
-                      <span>:</span>
-                      <span className='ml-2'>
-                        Herry Liao (+62 811-1923-512)
-                      </span>
-                    </dd>
                   </div>
                 </dl>
               </div>
